@@ -85,8 +85,6 @@ app.post("/api/persons", (request, response) => {
         return content
     })
 
-    morgan(":method :url :status :res[content-length] - :response-time ms :content")
-
     persons = persons.concat(person)
     response.json(person)
 })
