@@ -55,11 +55,11 @@ app.post("/api/persons", (request, response) => {
             (person.number === body.number) )
         )
      ) {
-            return response.status(400).json({
-                error: "Duplicates are not allowed here."
+         return response.status(400).json({
+             error: "Duplicates are not allowed here."
             })
         }
-
+    
     const person = {
         id: (Math.floor(Math.random() * 100000)),
         name: body.name,
